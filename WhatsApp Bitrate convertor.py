@@ -14,7 +14,7 @@ def convert_to_whatsapp_compatible(input_file, output_file):
         target_audio_bitrate = "128k"   # Audio bitrate limit
         
         # Resize video to target resolution
-        resized_clip = clip.resize(height=target_resolution[1])  # Maintain aspect ratio
+        resized_clip = clip.resized(height=target_resolution[1])  # Maintain aspect ratio
         
         # Export with WhatsApp-compatible settings
         resized_clip.write_videofile(
